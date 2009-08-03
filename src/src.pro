@@ -16,9 +16,10 @@ SOURCES += kchmbookmarkwindow.cpp kchmconfig.cpp \
  kchmviewwindow_qtwebkit.cpp kchmdbusiface.cpp
 TARGETDEPS += ../lib/libchmfile/libchmfile.a 
 
+TARGET = ../bin/kchmviewer
 LIBS += ../lib/libchmfile/libchmfile.a \
         ../lib/libchm/libchm.a
-TARGET = ../bin/kchmviewer
+
 CONFIG += ordered \
           warn_on \
           qt \

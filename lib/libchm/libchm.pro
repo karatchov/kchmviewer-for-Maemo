@@ -5,7 +5,8 @@ SOURCES +=  chm_lib.c \
 TARGET = chm
 DESTDIR = ./
 
-CONFIG += staticlib
+CONFIG += warn_off \
+          staticlib
 
 TEMPLATE = lib
 
