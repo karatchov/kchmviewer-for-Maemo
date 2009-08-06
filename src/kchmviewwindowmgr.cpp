@@ -172,7 +172,7 @@ KCHMViewWindow * KCHMViewWindowMgr::addNewTab( bool set_active )
 	
 	// Add it to the "Windows" menu
 	m_menuWindow->addAction( tabdata.action );
-	
+
 	return viewvnd;
 }
 

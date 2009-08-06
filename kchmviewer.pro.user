@@ -98,6 +98,7 @@
     <value type="QString" >USERPROFILE=C:\Documents and Settings\Malek</value>
     <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
     <value type="QString" >WINDIR=C:\WINDOWS</value>
+    <value type="QString" >__COMPAT_LAYER=EnableNXShowUI </value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >C:/Documents and Settings/Malek/My Documents/QTCreatorProjects/kchmviewer/kchmviewer.pro</value>
@@ -147,6 +148,7 @@
     <value type="QString" >USERPROFILE=C:\Documents and Settings\Malek</value>
     <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
     <value type="QString" >WINDIR=C:\WINDOWS</value>
+    <value type="QString" >__COMPAT_LAYER=EnableNXShowUI </value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>

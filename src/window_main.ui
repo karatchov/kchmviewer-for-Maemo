@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>873</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_Settings">
@@ -62,10 +62,12 @@
     <addaction name="view_Decrease_font_size_action"/>
     <addaction name="view_View_HTML_source_action"/>
     <addaction name="separator"/>
+    <addaction name="action_Hide_menu_bar"/>
     <addaction name="view_Toggle_fullscreen_action"/>
     <addaction name="view_Toggle_contents_action"/>
     <addaction name="view_Locate_in_contents_action"/>
     <addaction name="separator"/>
+    <addaction name="view_Enable_kinetic_scrolling"/>
     <addaction name="view_Set_encoding_action"/>
    </widget>
    <widget class="QMenu" name="menu_Windows">
@@ -128,10 +130,12 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="view_Locate_in_contents_action"/>
+   <addaction name="view_Toggle_contents_action"/>
    <addaction name="view_Decrease_font_size_action"/>
    <addaction name="view_Increase_font_size_action"/>
+   <addaction name="view_Enable_kinetic_scrolling"/>
    <addaction name="view_View_HTML_source_action"/>
+   <addaction name="view_Locate_in_contents_action"/>
    <addaction name="bookmark_AddAction"/>
    <addaction name="nav_actionPreviousPage"/>
    <addaction name="nav_actionNextPageToc"/>
@@ -284,7 +288,7 @@
     <string>Increases the document font size. The new font size will be stored.</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl++</string>
+    <string>F7</string>
    </property>
   </action>
   <action name="view_Decrease_font_size_action">
@@ -302,7 +306,7 @@
     <string>Decreases the document font size. The new font size will be stored.</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+-</string>
+    <string>F8</string>
    </property>
   </action>
   <action name="view_View_HTML_source_action">
@@ -346,6 +350,10 @@
    </property>
    <property name="checked">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/images.qrc">
+     <normaloff>:/images/icon_show_hide_toc.png</normaloff>:/images/icon_show_hide_toc.png</iconset>
    </property>
    <property name="text">
     <string>Enable &amp;side window</string>
@@ -494,6 +502,47 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="view_Enable_kinetic_scrolling">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/images.qrc">
+     <normaloff>:/images/icon_kinetic_scrolling.png</normaloff>:/images/icon_kinetic_scrolling.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enable &amp;kinetic scrolling</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable scrolling with the finger</string>
+   </property>
+   <property name="whatsThis">
+    <string>Hide the scroll bar, and make it possible to scroll by moving the content page with the mouse/finger</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="action_Hide_menu_bar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Hide menu bar</string>
+   </property>
+   <property name="toolTip">
+    <string>Hide the menu bar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
    </property>
   </action>
  </widget>

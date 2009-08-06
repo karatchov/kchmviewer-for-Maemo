@@ -23,5 +23,7 @@
         <file>icon_print.png</file>
         <file>icon_view_source.png</file>
         <file>kchmviewer.png</file>
+        <file>icon_show_hide_toc.png</file>
+        <file>icon_kinetic_scrolling.png</file>
     </qresource>
 </RCC>

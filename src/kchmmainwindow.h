@@ -26,6 +26,7 @@
 
 #include "kde-qt.h"
 #include "kchmviewwindow.h"
+#include "flickcharm.h"
 
 #include "ui_window_main.h"
 
@@ -109,6 +110,8 @@ class KCHMMainWindow : public QMainWindow, public Ui::MainWindow
 		void		actionViewHTMLsource();
 		void		actionToggleFullScreen();
 		void		actionToggleContentsTab();
+                void            actionHideMenubar();
+                void            actionEnableKineticScrolling();
 		void		actionLocateInContentsTab();
 
 		void		actionNavigateBack();
@@ -193,6 +196,7 @@ class KCHMMainWindow : public QMainWindow, public Ui::MainWindow
 	
 		QActionGroup		*	m_encodingActions;
 		QMenu				*	m_contextMenu;
+                FlickCharm                      FlickCharmHandler;
 	
 #if defined (ENABLE_AUTOTEST_SUPPORT)
 		enum	auto_test_state_t

@@ -26,7 +26,6 @@
 #include "kchmsettings.h"
 #include "ui_window_browser.h"
 
-
 class KCHMViewWindowMgr : public QWidget, public Ui::TabbedBrowser
 {
 	Q_OBJECT
@@ -104,6 +103,7 @@ class KCHMViewWindowMgr : public QWidget, public Ui::TabbedBrowser
 		// linked permanently - if a middle window is deleted, all the following
 		// actions will be relinked and replaced.
 		QList< QAction* >		m_actions;
+
 };
 
 #endif /* INCLUDE_KCHMVIEWWINDOWMGR_H */

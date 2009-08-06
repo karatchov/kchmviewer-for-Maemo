@@ -115,7 +115,12 @@ KCHMMainWindow::KCHMMainWindow()
 	m_autoteststate = STATE_OFF;
 #endif /* defined (ENABLE_AUTOTEST_SUPPORT) */
 
-	statusBar()->show();
+
+#ifdef Q_WS_HILDON
+        statusBar()->hide();
+#else
+        statusBar()->show();
+#endif
 	qApp->setWindowIcon( QPixmap(":/images/application.png") );
 
 	m_aboutDlgMenuText = i18n( "<html><b>%1 version %2</b><br><br>"
@@ -867,7 +872,8 @@ void KCHMMainWindow::actionOpenFile()
 	else
 	{
 		if ( !m_chmFile )
-			exit (1);
+			return ;
+			//exit (1);
 			
 		statusBar()->showMessage( i18n("Loading aborted"), 2000 );
 	}
@@ -1079,8 +1085,10 @@ void KCHMMainWindow::actionToggleFullScreen()
 		if ( isFullScreen() )
 		{
 			showNormal();
-			menuBar()->show();
-			statusBar()->show();
+#ifndef Q_WS_HILDON
+                        menuBar()->show();
+                        statusBar()->show();
+#endif
 		}
 	}
 }
@@ -1095,6 +1103,40 @@ void KCHMMainWindow::actionToggleContentsTab()
 		m_tabWidget->hide();
 }
 
+void KCHMMainWindow::actionHideMenubar()
+{
+    bool hide = action_Hide_menu_bar->isChecked();
+
+    if ( hide )
+    {
+            mainToolbar->hide();
+            navToolbar->hide();
+            viewToolbar->hide();
+    }
+    else
+    {
+            mainToolbar->show();
+            navToolbar->show();
+            viewToolbar->show();
+    }
+}
+
+void KCHMMainWindow::actionEnableKineticScrolling()
+{
+    //this is just a temporary hack
+    //todo: correctly support multiple tabs and saving state
+        bool enabled = view_Enable_kinetic_scrolling->isChecked();
+
+        if ( enabled )
+        {
+                FlickCharmHandler.activateOn(this->viewWindowMgr()->current()->getQWidget());
+        }
+        else
+        {
+                FlickCharmHandler.deactivateFrom(this->viewWindowMgr()->current()->getQWidget());
+        }
+
+}
 void KCHMMainWindow::actionLocateInContentsTab()
 {
 	// There may be no content tab at all
@@ -1269,6 +1311,16 @@ void KCHMMainWindow::setupActions()
 	         this,
 	         SLOT( actionToggleContentsTab() ) );
 	
+        connect( action_Hide_menu_bar,
+                        SIGNAL( triggered()),
+                 this,
+                 SLOT( actionHideMenubar() ) );
+
+        connect( view_Enable_kinetic_scrolling,
+                        SIGNAL( triggered()),
+                 this,
+                 SLOT( actionEnableKineticScrolling() ) );
+
 	connect( view_Locate_in_contents_action,
 			 SIGNAL( triggered() ),
 	         this,

@@ -69,7 +69,7 @@ int main( int argc, char ** argv )
 #endif
 	
 	appConfig.load();
-	app.installEventFilter( &gKeyEventFilter );
+        app.installEventFilter( &gKeyEventFilter );
 	
 #if !defined (WIN32)	
 	if ( QDBusConnection::sessionBus().isConnected() )
