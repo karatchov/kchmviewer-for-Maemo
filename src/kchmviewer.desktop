@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.1
+Type=Application
+Name=kchmviewer
+Exec=/usr/bin/kchmviewer
+Icon=kchmviewer
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable

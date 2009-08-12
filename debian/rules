@@ -1,0 +1,92 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+
+CFLAGS = -Wall
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O3
+endif
+
+ifneq (,$(findstring armel,$(DEB_BUILD_ARCH)))
+	CFLAGS += -mfpu=vfp -mfloat-abi=softfp -mcpu=arm1136jf-s -mtune=arm1136jf-s
+endif
+
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	# Add here commands to configure the package.
+	mkdir -p build
+	cd build && qmake QMAKE_CFLAGS="$(CFLAGS)" QMAKE_CXXFLAGS="$(CFLAGS)" PREFIX=/usr ../kchmviewer.pro
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+
+	# Add here commands to compile the package.
+	cd build && $(MAKE)
+
+	touch $@
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	# Add here commands to clean up after the build process.
+	rm -rf build
+
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	# Add here commands to install the package into debian/kchmviewer.
+	#cd build && $(MAKE) INSTALL_ROOT=$(CURDIR)/debian/kchmviewer install #I would expect to be able to do this but it doesn't work. I blame qmake for making shit Makefiles. ;)
+	#So I'll just have to install the files manually. Yay.
+	install -D -m755 $(CURDIR)/build/bin/kchmviewer $(CURDIR)/debian/kchmviewer/usr/bin/kchmviewer
+	install -D -m644 $(CURDIR)/src/kchmviewer.desktop $(CURDIR)/debian/kchmviewer/usr/share/applications/hildon/kchmviewer.desktop
+	install -D -m644 $(CURDIR)/src/cr64-app-kchmviewer.png $(CURDIR)/debian/kchmviewer/usr/share/icons/hicolor/scalable/hildon/kchmviewer.png
+	install -D -m644 $(CURDIR)/src/cr48-app-kchmviewer.png $(CURDIR)/debian/kchmviewer/usr/share/icons/hicolor/48x48/hildon/kchmviewer.png
+	install -D -m644 $(CURDIR)/src/cr26-app-kchmviewer.png $(CURDIR)debian/kchmviewer/usr/share/icons/hicolor/26x26/hildon/kchmviewer.png
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs ChangeLog
+	dh_installdocs
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

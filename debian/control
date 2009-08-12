@@ -1,0 +1,66 @@
+Source: kchmviewer
+Section: user/utilities
+Priority: optional
+Maintainer: Malek Boughattas <karatchov@googlemail.com>
+Original-Maintainer: Fathi Boudra <fabo@debian.org>, Jose Luis Tallon <jltallon@adv-solutions.net>
+Build-Depends: debhelper (>= 5), sharutils, libqt4-dev
+Standards-Version: 3.8.2
+Homepage: http://www.kchmviewer.net/
+
+Package: kchmviewer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: CHM viewer for KDE
+ KchmViewer is a chm (MS HTML help file format) viewer, written in C++.
+ Unlike most existing CHM viewers for Unix, it uses Trolltech Qt widget
+ library, and does not depend on KDE or GNOME. However, it may be compiled
+ with full KDE support, including KDE widgets and KIO/KHTML.
+ .
+ The main advantage of KchmViewer is non-English language support. Unlike
+ others, KchmViewer in most cases correctly detects help file encoding,
+ correctly shows tables of context of Russian, Korean, Chinese and Japanese
+ help files, and correctly searches in non-English help files (search for
+ MBCS languages - ja/ko/ch is still in progress).
+ .
+ Completely safe and harmless. Does not support JavaScript in any way,
+ optionally warns you before opening an external web page, or switching to
+ another help file. Shows an appropriate image for every TOC entry.
+ .
+ KchmViewer Has complete chm index support, including multiple index entries,
+ cross-links and parent/child entries in index as well as Persistent bookmarks
+ support. Correctly detects and shows encoding of any valid chm file.
+XB-Maemo-Display-Name: KchmViewer
+XB-Maemo-Icon-26: 
+ iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAA
+ AARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3
+ YXJlAFBhaW50Lk5FVCB2My4zNqnn4iUAAAWTSURBVEhL5ZVbTNNXHMddfFjGfNiW
+ uIct2V6W+bJsyTQbXsg0ztuGihcUnZdxEbmIXKSIFFAEQYrc23Ir5Q4tzBZoQUop
+ lxYEBdrIRSjMItdSKAisFKGF7/7//2KVuSxucw/LTnKSJj3n9zm/z/n2dM2a//Ww
+ Y9Le2Bnj7nuUfdnXszDmg39FxhnuVatD7ACJdbQzvibmFsY50854T8XexIvedmz/
+ D18L9FJJwkf7kryVWxiucOXGgVktAlMigiOHAetoFxK8tDvxYtd3TL8Q57wbn/8t
+ qAux8ZtYt/6tMefBUzRBNbaIqkdPIVIb0aIxgFNdi82Mc1SX5NzMcFneHufeSXQb
+ 6pwVbv1KUFuW346dCRdmyQJX+FzICEDy/XlU9RsxNLOE1OZp/NQ6BY/sJAvoGdA6
+ yhnbI88NuHHD3/pDGF3IXn+SE+y0K+FCgc2t8+ZnG6XKh3AT6OCQNwIn3hiipDqI
+ VHrYJvYiV9ZkAW2KcsSmSEccY15GXbNCsQriERv83u5od0dbpp/0AMt/wZZ1iVSw
+ 6pTV7b3Y4CVGCO8B6jtGkStVYwe9Fp+eF6G4ToWvbjphY+SP2B7rAa98Brr7etDf
+ 3393FcgrOWyX9UV7WEc6YVuMK3HBv/l+cTLv3MGh8HqElzzE5RwVjjKasCu0FvbX
+ ahDG52MrcU8nOCGIKM+EZngQ09PTSCnKWrFx+D7IAlOpVJ/dZMXjy5CTLwGewWyT
+ AlHW8DN2+FXiHXsB1h0RYNuFcghkangXJsKnOB6JUh7GJyewsLAAkUKKjaf2ifY7
+ O7xpATFKuZt/SKEjVJSOU1nXcCyDjsNpgTjApoGILPaz/XGQ+OyWE4dyRTcKK3pR
+ RMwSmRJhwmwEClhIrxfgyewMTCYTJG0K2Pg6iOz8nZ9DgoqSbI4k0wycxjKMzUxC
+ /8sMHuvH0Dn6CM2aTsh6WiHuaIRAWYeCexJkKMqQKOMjuioX18WZCC1PR06TGIZ5
+ A8xmMyrb5fj2qrMsMDX6OYRsySkzLK67tweillrcqshFTnMl2h73QG+YgW5umoJ2
+ j2lwf+Ah6tTtFJTfVoOsu2IwJPlEvGUwEqpWVlYgVsrhmnEdx9Pp0w4c+p5VQTjE
+ prmMTYxDp9NBMzBAuK1BREkafApjwWuVomtUg/HZKQxOjaNH+xjtg71o6FMiTS4k
+ 4i3H4uIiBSlT1oNWFE9834NeYp1vcbx5T5K3kwV2IoO+TTM5Srk1Go148uQJtFot
+ lF0PECfIghsnHBGEIlJhn26IAGqpA0g6m7G0tARyCAmtUeIsSv2UYZbSntdyB775
+ t+CTFnmdgqU3CD9OlQuM2lk9tWl5eZkqMD8/T0V0eGQYIrkUEfxUSi23SYT6nnaY
+ zCZqfTGhMa66AP26YVR0NuFGORdJZXkQ11WjuaUZLknBbEtXxJO/3i6F5h5ekdkm
+ 6W6B4anRAiXVGAwG6PV64kfYC6W6i7p0chTdr4Z7IQNRldnw5EaCwUtHjbwOHR0d
+ UKvVeKTR4AzzSuBLT1Cpsn7t8YygL05zQ5MSZDx9G+HbtGym7oAsTqqdm5uDmeg6
+ m0ja7hgP0Lgx4FWVobOrCxqi8MjICCYmJjA1NYUh7SjOpgSf/NOH9UZF1rojaYH2
+ jtnhDakNt6GZGLHoTJGVIJTHwj1VGwYHB6kgkZrJQ5Dda/UTELbKFkNusxvPpoW8
+ /0ovuC8//u29CV5SuoANlqwY/gXE/5GUj8nJSaow2SWl1ziPxj4V4iT5A2c5oVGu
+ 2REbXgnw4qKrpWlWdiyatJpI2pheR3VGBoZMat/4IDiK0gXPgmihQ3rQvkgxd+1f
+ Bry4gVVbbHU4JUDKk1eib0iDwpYqU7CQrbBN9jntx49/9x8V//1mrqLc6jA7IOMg
+ 6xI9oCT5k9da/D9X7Fe5rmYrXvfjGgAAAABJRU5ErkJggg==

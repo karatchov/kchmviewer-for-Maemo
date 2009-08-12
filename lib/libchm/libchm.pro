@@ -3,7 +3,7 @@ HEADERS += 	chm_lib.h \
 SOURCES +=  chm_lib.c \
 			lzx.c 
 TARGET = chm
-DESTDIR = ./
+DESTDIR = ../
 
 CONFIG += warn_off \
           staticlib

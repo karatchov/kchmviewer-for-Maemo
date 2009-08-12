@@ -16,7 +16,7 @@ SOURCES +=  libchmfile.cpp \
   libchmsearchengine_impl.cpp \
   libchmsearchengine_indexing.cpp
 TARGET = chmfile
-DESTDIR = ./
+DESTDIR = ../
 CONFIG += warn_on qt staticlib
 TEMPLATE = lib
 INCLUDEPATH += ../../src

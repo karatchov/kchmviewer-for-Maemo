@@ -37,10 +37,9 @@ SOURCES += kchmbookmarkwindow.cpp \
     kchmviewwindow_qtwebkit.cpp \
     kchmdbusiface.cpp \
     flickcharm.cpp
-TARGETDEPS += ../lib/libchmfile/libchmfile.a
 TARGET = ../bin/kchmviewer
-LIBS += ../lib/libchmfile/libchmfile.a \
-    ../lib/libchm/libchm.a
+LIBS += ../lib/libchmfile.a \
+    ../lib/libchm.a
 CONFIG += ordered \
     warn_on \
     qt \

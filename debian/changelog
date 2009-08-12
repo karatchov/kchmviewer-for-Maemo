@@ -1,0 +1,131 @@
+kchmviewer (4.1-1maemo2) unstable; urgency=low
+
+  * Source is based on 4.1-1, changes have been made before Faheem Pervez's changes
+  * debian folder taken from 4.1-1maemo1
+  * Some changes to rules file (disable debug, optimize build for N8xO)
+  * chmlib 0.40a is included with source, not needed as build dependency anymore
+  * Disable statusbar
+  * Add toolbar icon to show/hide TOC
+  * Add menu item to show/hide toolbar
+  * Bind Zoom In and Zoom Out to buttons.
+  * Add toolbar icon & menu entry to activate finger scrolling (still experimental & buggy)
+
+ -- Malek Boughattas <karatchov@googlemail.com>  Wed, 12 Aug 2009 02:40:12 +0100
+ 
+kchmviewer (4.1-1maemo1) unstable; urgency=low
+
+  * Remove built in fullscreen function
+  * Bind Zoom In and Zoom Out to buttons.
+  * Disable statusbar (default Maemo behaviour)
+
+ -- Faheem Pervez <trippin1@gmail.com>  Wed,  5 Aug 2009 18:10:14 +0100
+
+kchmviewer (4.1-1maemo0) unstable; urgency=low
+
+  * Lower debhelper version to 5.
+  * Rewrite rules file.
+  * Install 26x26 icon.
+
+ -- Faheem Pervez <trippin1@gmail.com>  Wed,  5 Aug 2009 10:43:11 +0100
+
+kchmviewer (4.1-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #479402, #496888)
+  * Add patch to disable kio-msits build to avoid okular-extra-backends
+    conflict.
+  * Bump compat/debhelper to 7.
+  * Update debian/control:
+    - Set Debian KDE Extras Team as Maintainer and myself in Uploaders.
+    - Update build dependencies:
+      - Add cmake, quilt and pkg-kde-tools
+      - Replace kdelibs4-dev by kdelibs5-dev
+      - Remove autotools-dev
+    - Update Standards-Version to 3.8.2 (no changes needed).
+    - Add Homepage field
+  * Remove deprecated files: debiandirs, dirs and Makefile.
+  * Update debian/menu file to Debian menu policy 2.1
+  * Switch debian/rules to dh.
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 29 Jul 2009 21:43:18 +0200
+
+kchmviewer (3.1-2) unstable; urgency=low
+
+  * Fixed FTBFS with gcc-4.3 (Closes: #474869)
+    - Updated to S-V 3.7.3 with no changes
+
+  * Fixed uscan (Closes: #449696)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun, 13 Apr 2008 01:27:32 +0200
+
+kchmviewer (3.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #428128)
+    - Fixed crash if last file gone (Closes: #420561)
+
+  * Fixed menu entry to file into "Apps/Viewers" (Closes: #403032)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun, 17 Jun 2007 13:55:44 +0200
+
+kchmviewer (3.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Fri, 25 May 2007 23:21:26 +0200
+
+kchmviewer (2.7-1) unstable; urgency=low
+
+  * New upstream version
+    - Should fix crashes due to bad encoding detection (Closes: #390329)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Fri,  8 Dec 2006 02:11:46 +0100
+
+kchmviewer (2.6-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 31 Aug 2006 02:56:52 +0200
+
+kchmviewer (2.5-2) unstable; urgency=low
+
+  * Fix FTBFS with g++4.1 (Closes: #372168)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 08 Jun 2006 20:08:39 +0200
+
+kchmviewer (2.5-1) unstable; urgency=low
+
+  * New upstream version
+  
+  * Fix building with g++4.1 (Closes: #356517)
+
+  * Updated to standards version 3.7.2 with no changes
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Thu, 11 May 2006  2:32:41 +0200
+
+kchmviewer (2.0-1) unstable; urgency=low
+
+  * New upstream version (Closes: #353709)
+    - included proper icons from upstream :-)
+
+  * Package sponsored by Tommaso Moroni
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Mon, 20 Feb 2006 22:19:57 +0100
+
+kchmviewer (1.3a-1) unstable; urgency=low
+
+  * First upload to the Archive (Closes: #312700)
+
+  * Package sponsored by Tommaso Moroni
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sun,  1 Jan 2006  2:33:38 +0100
+
+kchmviewer (1.2a-1) unstable; urgency=low
+
+  [ Tommaso Moroni ]
+  * Initial packaging, incomplete
+
+  [ Jose Luis Tallon ]
+  * Initial release
+    - Fixed to use libchm instead of chmlib
+    - Added icons and manpage (1.2 -> 1.2a)
+
+ -- Jose Luis Tallon <jltallon@adv-solutions.net>  Sat,  10 Dec 2005 18:48:17 +0100
