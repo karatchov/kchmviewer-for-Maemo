@@ -308,7 +308,10 @@ void KCHMViewWindow_QTextBrowser::find( bool forward, bool backward )
 
 void KCHMViewWindow_QTextBrowser::contextMenuEvent(QContextMenuEvent * e)
 {
-	// From Qt Assistant
+#ifdef Q_WS_HILDON // If in Maemo, we don't need this menu
+        return;
+#endif
+        // From Qt Assistant
 	QMenu *m = new QMenu(0);
 	QString link = anchorAt( e->pos() );
 	

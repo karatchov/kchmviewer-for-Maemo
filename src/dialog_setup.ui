@@ -35,7 +35,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="Widget8">
       <attribute name="title">
@@ -480,6 +480,13 @@
           <string>Other</string>
          </property>
          <layout class="QVBoxLayout">
+          <item>
+           <widget class="QCheckBox" name="boxDisableTabs">
+            <property name="text">
+             <string>Disable tabs</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QCheckBox" name="boxLayoutDirectionRL">
             <property name="text">

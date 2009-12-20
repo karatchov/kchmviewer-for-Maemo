@@ -46,7 +46,7 @@ KCHMConfig::KCHMConfig()
 	m_onNewChmClick = ACTION_ASK_USER;
 	m_onExternalLinkClick = ACTION_ASK_USER;
 	m_numOfRecentFiles = 10;
-	m_HistoryStoreExtra = true;
+        m_HistoryStoreExtra = false;
 	
 	// Webkit only present in 4.4+
 #if defined (QT_WEBKIT_LIB)
@@ -61,6 +61,7 @@ KCHMConfig::KCHMConfig()
 	m_kdeEnableRefresh = false;
 	
 	m_advUseInternalEditor = true;
+        m_advDisableTabs = true;
 	m_advLayoutDirectionRL = false;
 	m_advAutodetectEncoding = false;
 	m_advExternalEditorPath = "/usr/bin/kate";
@@ -135,6 +136,8 @@ bool KCHMConfig::load()
 				m_advUseInternalEditor = value.toInt() ? true : false;
 			else if ( key == "advExternalEditorPath" )
 				m_advExternalEditorPath = value;
+                        else if ( key == "advDisableTabs" )
+                                m_advDisableTabs = value.toInt() ? true : false;
 			else if ( key == "advLayoutDirectionRL" )
 				m_advLayoutDirectionRL = value.toInt() ? true : false;
 			else if ( key == "advAutoDetectEncoding" )
@@ -191,6 +194,7 @@ bool KCHMConfig::save( )
 	stream << "kdeEnableRefresh=" << m_kdeEnableRefresh << "\n";
 	stream << "advUseInternalEditor=" << m_advUseInternalEditor << "\n";
 	stream << "advExternalEditorPath=" << m_advExternalEditorPath << "\n";
+        stream << "advDisableTabs=" << m_advDisableTabs << "\n";
 	stream << "advLayoutDirectionRL=" << m_advLayoutDirectionRL << "\n";
 	stream << "advAutoDetectEncoding=" << m_advAutodetectEncoding << "\n";
 	

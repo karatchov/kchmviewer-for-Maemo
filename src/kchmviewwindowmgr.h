@@ -25,6 +25,7 @@
 #include "kde-qt.h"
 #include "kchmsettings.h"
 #include "ui_window_browser.h"
+#include "qcustomtabwidget.h"
 
 class KCHMViewWindowMgr : public QWidget, public Ui::TabbedBrowser
 {

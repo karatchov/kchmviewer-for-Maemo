@@ -1,3 +1,19 @@
+kchmviewer (4.1-1maemo4) unstable; urgency=low
+
+  * Context menu is now disabled, this should avoid random show up
+
+ -- Malek Boughattas <karatchov@googlemail.com>  Mon, 16 Nov 2009 11:04:10 +0100
+
+kchmviewer (4.1-1maemo3) unstable; urgency=low
+
+  * Using correct CFLAGS to build chmlib.
+  * Disabled all build optimizations(this seems to correct the instability)
+  * kinetic scrolling should be less buggy now
+  * Added an option (enabled by default) to disable tabs
+  * History is disabled by default now, this should reduce startup crashes
+  
+ -- Malek Boughattas <karatchov@googlemail.com>  Tue, 22 Sep 2009 13:13:02 +0100
+  
 kchmviewer (4.1-1maemo2) unstable; urgency=low
 
   * Source is based on 4.1-1, changes have been made before Faheem Pervez's changes

@@ -108,6 +108,8 @@ void FlickCharm::deactivateFrom(QWidget *widget)
 {
     QAbstractScrollArea *scrollArea = dynamic_cast<QAbstractScrollArea*>(widget);
     if (scrollArea) {
+        scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         QWidget *viewport = scrollArea->viewport();
 
         viewport->removeEventFilter(this);
@@ -121,6 +123,9 @@ void FlickCharm::deactivateFrom(QWidget *widget)
 
     QWebView *webView = dynamic_cast<QWebView*>(widget);
     if (webView) {
+        QWebFrame *frame = webView->page()->mainFrame();
+        frame->setScrollBarPolicy(Qt::Vertical, Qt::ScrollBarAsNeeded);
+        frame->setScrollBarPolicy(Qt::Horizontal, Qt::ScrollBarAsNeeded);
         webView->removeEventFilter(this);
 
         delete d->flickData[webView];
@@ -288,7 +293,11 @@ void FlickCharm::timerEvent(QTimerEvent *event)
 
         if (data->state == FlickData::ManualScroll) {
             count++;
-            data->speed = QCursor::pos() - data->dragPos;
+            QPoint speed = QCursor::pos() - data->dragPos;
+            if ( speed != QPoint(0,0) )
+            {
+                data->speed = speed;
+            }
             data->dragPos = QCursor::pos();
         }
 
@@ -298,7 +307,7 @@ void FlickCharm::timerEvent(QTimerEvent *event)
             QPoint p = scrollOffset(data->widget);
             setScrollOffset(data->widget, p - data->speed);
             if (data->speed == QPoint(0, 0))
-                data->state = FlickData::Steady;
+                data->state = FlickData::Steady;                
         }
     }
 

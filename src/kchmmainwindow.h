@@ -110,8 +110,8 @@ class KCHMMainWindow : public QMainWindow, public Ui::MainWindow
 		void		actionViewHTMLsource();
 		void		actionToggleFullScreen();
 		void		actionToggleContentsTab();
-                void            actionHideMenubar();
-                void            actionEnableKineticScrolling();
+                void		actionHideToolbar();
+                void		actionEnableKineticScrolling();
 		void		actionLocateInContentsTab();
 
 		void		actionNavigateBack();

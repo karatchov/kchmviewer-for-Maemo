@@ -366,6 +366,10 @@ void KCHMViewWindow_QtWebKit::find( bool , bool backward )
 
 void KCHMViewWindow_QtWebKit::contextMenuEvent(QContextMenuEvent * e)
 {
+#ifdef Q_WS_HILDON //If in Maemo, we don't need this menu
+        return;
+#endif
+
 	// From Qt Assistant
 	QMenu *m = new QMenu(0);
 	QString link = anchorAt( e->pos() );

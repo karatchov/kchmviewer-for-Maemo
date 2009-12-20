@@ -6,4 +6,3 @@ error("Use the qmake include with Qt4.4 or greater, on Debian that is qmake-qt4"
 
 SUBDIRS += lib src
 TEMPLATE = subdirs 
-CONFIG += release

@@ -17,7 +17,8 @@ HEADERS += kchmsettings.h \
     version.h \
     kchmviewwindow_qtwebkit.h \
     kchmdbusiface.h \
-    flickcharm.h
+    flickcharm.h \
+    qcustomtabwidget.h
 SOURCES += kchmbookmarkwindow.cpp \
     kchmconfig.cpp \
     kchmindexwindow.cpp \
@@ -64,3 +65,4 @@ win32 {
     SOURCES -= kchmdbusiface.cpp
     CONFIG -= dbus
 }
+OTHER_FILES += 

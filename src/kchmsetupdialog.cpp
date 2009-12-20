@@ -84,6 +84,7 @@ KCHMSetupDialog::KCHMSetupDialog(QWidget *parent)
 	
 	m_numOfRecentFiles = appConfig.m_numOfRecentFiles;
 
+        boxDisableTabs->setChecked( appConfig.m_advDisableTabs);
 	boxAutodetectEncoding->setChecked( appConfig.m_advAutodetectEncoding );
 	boxLayoutDirectionRL->setChecked( appConfig.m_advLayoutDirectionRL );
 }
@@ -159,6 +160,8 @@ void KCHMSetupDialog::accept()
 		
 	if ( appConfig.m_numOfRecentFiles != m_numOfRecentFiles )
 		need_restart = true;
+
+        appConfig.m_advDisableTabs = boxDisableTabs->isChecked();
 	
 	// Autodetect encoding
 	if ( appConfig.m_advAutodetectEncoding != boxAutodetectEncoding->isChecked() )

@@ -6,7 +6,7 @@
  </data>
  <data>
   <variable>RunConfiguration0-Executable</variable>
-  <value type="QString" >C:\Documents and Settings\Malek\My Documents\QTCreatorProjects\kchmviewer\src\bin\kchmviewer.exe</value>
+  <value type="QString" >C:\Users\Malek\kchmviewer-for-Maemo\src\bin\kchmviewer.exe</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
@@ -37,6 +37,42 @@
   <value type="QString" >ProjectExplorer.CustomExecutableRunConfiguration</value>
  </data>
  <data>
+  <variable>RunConfiguration1-Arguments</variable>
+  <valuelist type="QVariantList" />
+ </data>
+ <data>
+  <variable>RunConfiguration1-Executable</variable>
+  <value type="QString" >/home/malek/Desktop/kchmviewer/bin/kchmviewer</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-RunConfiguration.name</variable>
+  <value type="QString" >kchmviewer-linux</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-UseTerminal</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-UserEnvironmentChanges</variable>
+  <valuelist type="QVariantList" />
+ </data>
+ <data>
+  <variable>RunConfiguration1-UserName</variable>
+  <value type="QString" >kchmviewer-linux</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-UserSetName</variable>
+  <value type="bool" >true</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-WorkingDirectory</variable>
+  <value type="QString" >$BUILDDIR</value>
+ </data>
+ <data>
+  <variable>RunConfiguration1-type</variable>
+  <value type="QString" >ProjectExplorer.CustomExecutableRunConfiguration</value>
+ </data>
+ <data>
   <variable>activeRunConfiguration</variable>
   <value type="int" >0</value>
  </data>
@@ -50,7 +86,16 @@
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <value key="QtVersionId" type="int" >0</value>
    <value key="addQDumper" type="" ></value>
-   <value key="buildDirectory" type="QString" >C:\Documents and Settings\Malek\My Documents\QTCreatorProjects\kchmviewer</value>
+   <value key="buildDirectory" type="QString" >C:\Users\Malek\kchmviewer-for-Maemo</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildConfiguration-Debug-Linux</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug-Linux</value>
+   <value key="QtVersionId" type="int" >3</value>
+   <value key="addQDumper" type="" ></value>
+   <value key="buildDirectory" type="QString" >C:\Users\Malek\kchmviewer-for-Maemo</value>
   </valuemap>
  </data>
  <data>
@@ -63,52 +108,157 @@
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Debug-buildstep0</variable>
+  <variable>buildconfiguration-Debug-Linux-buildstep0</variable>
   <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug-Linux</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
-    <value type="QString" >APPDATA=C:\Documents and Settings\Malek\Application Data</value>
-    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\ProgramData</value>
+    <value type="QString" >APPDATA=C:\Users\Malek\AppData\Roaming</value>
     <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
-    <value type="QString" >COMPUTERNAME=HP-XP</value>
-    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >COMPUTERNAME=HP-WIN7</value>
+    <value type="QString" >COMSPEC=C:\Windows\system32\cmd.exe</value>
     <value type="QString" >FP_NO_HOST_CHECK=NO</value>
     <value type="QString" >HOMEDRIVE=C:</value>
-    <value type="QString" >HOMEPATH=\Documents and Settings\Malek</value>
-    <value type="QString" >LOGONSERVER=\\HP-XP</value>
+    <value type="QString" >HOMEPATH=\Users\Malek</value>
+    <value type="QString" >LOCALAPPDATA=C:\Users\Malek\AppData\Local</value>
+    <value type="QString" >LOGONSERVER=\\HP-WIN7</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=2</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Qt\qt-win-opensource-src-4.4.3\bin;C:\Program Files\Delphi7SE\bin;C:\Program Files\Delphi7SE\Projects\BPL;c:\Program Files\Intel\DMIX;C:\WINDOWS\system32\Wbem;C:\Program Files\MPlayer-p4-svn-27811;C:\Qt\2009.03\qt\bin;C:\Qt\2009.03\mingw\bin;C:\Program Files\Git\cmd</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\ArcSoft\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\calibre;C:\Program Files\FreeTime\FormatFactory\FFModules;C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>
     <value type="QString" >PROCESSOR_REVISION=0f06</value>
+    <value type="QString" >PROGRAMDATA=C:\ProgramData</value>
     <value type="QString" >PROGRAMFILES=C:\Program Files</value>
-    <value type="QString" >QMAKESPEC=win32-g++</value>
+    <value type="QString" >PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</value>
+    <value type="QString" >PUBLIC=C:\Users\Public</value>
     <value type="QString" >QTDIR=C:/Qt/2009.03/qt</value>
     <value type="QString" >SESSIONNAME=Console</value>
     <value type="QString" >SYSTEMDRIVE=C:</value>
-    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
-    <value type="QString" >TEMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >TMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >USERDOMAIN=HP-XP</value>
+    <value type="QString" >SYSTEMROOT=C:\Windows</value>
+    <value type="QString" >TEMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >TMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >USERDOMAIN=HP-Win7</value>
     <value type="QString" >USERNAME=Malek</value>
-    <value type="QString" >USERPROFILE=C:\Documents and Settings\Malek</value>
+    <value type="QString" >USERPROFILE=C:\Users\Malek</value>
     <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
-    <value type="QString" >WINDIR=C:\WINDOWS</value>
-    <value type="QString" >__COMPAT_LAYER=EnableNXShowUI </value>
+    <value type="QString" >WINDIR=C:\Windows</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
-    <value type="QString" >C:/Documents and Settings/Malek/My Documents/QTCreatorProjects/kchmviewer/kchmviewer.pro</value>
+    <value type="QString" >C:/Users/Malek/kchmviewer-for-Maemo/kchmviewer.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >win32-g++</value>
+    <value type="QString" >-r</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Qt/2009.03/qt/bin/qmake.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >C:/Users/Malek/kchmviewer-for-Maemo</value>
+   <value key="buildConfiguration" type="int" >2</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-Linux-buildstep1</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug-Linux</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALLUSERSPROFILE=C:\ProgramData</value>
+    <value type="QString" >APPDATA=C:\Users\Malek\AppData\Roaming</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=HP-WIN7</value>
+    <value type="QString" >COMSPEC=C:\Windows\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Users\Malek</value>
+    <value type="QString" >LOCALAPPDATA=C:\Users\Malek\AppData\Local</value>
+    <value type="QString" >LOGONSERVER=\\HP-WIN7</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=2</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\ArcSoft\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\calibre;C:\Program Files\FreeTime\FormatFactory\FFModules;C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=6</value>
+    <value type="QString" >PROCESSOR_REVISION=0f06</value>
+    <value type="QString" >PROGRAMDATA=C:\ProgramData</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</value>
+    <value type="QString" >PUBLIC=C:\Users\Public</value>
+    <value type="QString" >QTDIR=C:/Qt/2009.03/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\Windows</value>
+    <value type="QString" >TEMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >TMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >USERDOMAIN=HP-Win7</value>
+    <value type="QString" >USERNAME=Malek</value>
+    <value type="QString" >USERPROFILE=C:\Users\Malek</value>
+    <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
+    <value type="QString" >WINDIR=C:\Windows</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >C:/Qt/2009.03/mingw/bin/mingw32-make.exe</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >C:/Users/Malek/kchmviewer-for-Maemo</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-Linux-cleanstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug-Linux</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep0</variable>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALLUSERSPROFILE=C:\ProgramData</value>
+    <value type="QString" >APPDATA=C:\Users\Malek\AppData\Roaming</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=HP-WIN7</value>
+    <value type="QString" >COMSPEC=C:\Windows\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Users\Malek</value>
+    <value type="QString" >LOCALAPPDATA=C:\Users\Malek\AppData\Local</value>
+    <value type="QString" >LOGONSERVER=\\HP-WIN7</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=2</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\ArcSoft\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\calibre;C:\Program Files\FreeTime\FormatFactory\FFModules;C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\bin;C:\Qt\2009.03\qt\bin;C:\Python26;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=6</value>
+    <value type="QString" >PROCESSOR_REVISION=0f06</value>
+    <value type="QString" >PROGRAMDATA=C:\ProgramData</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</value>
+    <value type="QString" >PUBLIC=C:\Users\Public</value>
+    <value type="QString" >QTDIR=C:/Qt/2009.03/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\Windows</value>
+    <value type="QString" >TEMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >TMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >USERDOMAIN=HP-Win7</value>
+    <value type="QString" >USERNAME=Malek</value>
+    <value type="QString" >USERPROFILE=C:\Users\Malek</value>
+    <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
+    <value type="QString" >WINDIR=C:\Windows</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >C:/Users/Malek/kchmviewer-for-Maemo/kchmviewer.pro</value>
     <value type="QString" >-spec</value>
     <value type="QString" >win32-g++</value>
     <value type="QString" >-r</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >C:/Qt/2009.03/qt/bin/qmake.exe</value>
    <value key="abstractProcess.enabled" type="bool" >false</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >C:/Documents and Settings/Malek/My Documents/QTCreatorProjects/kchmviewer</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >C:/Users/Malek/kchmviewer-for-Maemo</value>
    <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
  </data>
@@ -117,45 +267,46 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
-    <value type="QString" >APPDATA=C:\Documents and Settings\Malek\Application Data</value>
-    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\ProgramData</value>
+    <value type="QString" >APPDATA=C:\Users\Malek\AppData\Roaming</value>
     <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
-    <value type="QString" >COMPUTERNAME=HP-XP</value>
-    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >COMPUTERNAME=HP-WIN7</value>
+    <value type="QString" >COMSPEC=C:\Windows\system32\cmd.exe</value>
     <value type="QString" >FP_NO_HOST_CHECK=NO</value>
     <value type="QString" >HOMEDRIVE=C:</value>
-    <value type="QString" >HOMEPATH=\Documents and Settings\Malek</value>
-    <value type="QString" >LOGONSERVER=\\HP-XP</value>
+    <value type="QString" >HOMEPATH=\Users\Malek</value>
+    <value type="QString" >LOCALAPPDATA=C:\Users\Malek\AppData\Local</value>
+    <value type="QString" >LOGONSERVER=\\HP-WIN7</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=2</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Qt\qt-win-opensource-src-4.4.3\bin;C:\Program Files\Delphi7SE\bin;C:\Program Files\Delphi7SE\Projects\BPL;c:\Program Files\Intel\DMIX;C:\WINDOWS\system32\Wbem;C:\Program Files\MPlayer-p4-svn-27811;C:\Qt\2009.03\qt\bin;C:\Qt\2009.03\mingw\bin;C:\Program Files\Git\cmd</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\ArcSoft\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\calibre;C:\Program Files\FreeTime\FormatFactory\FFModules;C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\bin;C:\Qt\2009.03\qt\bin;C:\Python26;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>
     <value type="QString" >PROCESSOR_REVISION=0f06</value>
+    <value type="QString" >PROGRAMDATA=C:\ProgramData</value>
     <value type="QString" >PROGRAMFILES=C:\Program Files</value>
-    <value type="QString" >QMAKESPEC=win32-g++</value>
+    <value type="QString" >PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</value>
+    <value type="QString" >PUBLIC=C:\Users\Public</value>
     <value type="QString" >QTDIR=C:/Qt/2009.03/qt</value>
     <value type="QString" >SESSIONNAME=Console</value>
     <value type="QString" >SYSTEMDRIVE=C:</value>
-    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
-    <value type="QString" >TEMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >TMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >USERDOMAIN=HP-XP</value>
+    <value type="QString" >SYSTEMROOT=C:\Windows</value>
+    <value type="QString" >TEMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >TMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >USERDOMAIN=HP-Win7</value>
     <value type="QString" >USERNAME=Malek</value>
-    <value type="QString" >USERPROFILE=C:\Documents and Settings\Malek</value>
+    <value type="QString" >USERPROFILE=C:\Users\Malek</value>
     <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
-    <value type="QString" >WINDIR=C:\WINDOWS</value>
-    <value type="QString" >__COMPAT_LAYER=EnableNXShowUI </value>
+    <value type="QString" >WINDIR=C:\Windows</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >C:/Qt/2009.03/mingw/bin/mingw32-make.exe</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >C:/Documents and Settings/Malek/My Documents/QTCreatorProjects/kchmviewer</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >C:/Users/Malek/kchmviewer-for-Maemo</value>
   </valuemap>
  </data>
  <data>
@@ -163,37 +314,39 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
-    <value type="QString" >APPDATA=C:\Documents and Settings\Malek\Application Data</value>
-    <value type="QString" >CLIENTNAME=Console</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\ProgramData</value>
+    <value type="QString" >APPDATA=C:\Users\Malek\AppData\Roaming</value>
     <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
-    <value type="QString" >COMPUTERNAME=HP-XP</value>
-    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >COMPUTERNAME=HP-WIN7</value>
+    <value type="QString" >COMSPEC=C:\Windows\system32\cmd.exe</value>
     <value type="QString" >FP_NO_HOST_CHECK=NO</value>
     <value type="QString" >HOMEDRIVE=C:</value>
-    <value type="QString" >HOMEPATH=\Documents and Settings\Malek</value>
-    <value type="QString" >LOGONSERVER=\\HP-XP</value>
+    <value type="QString" >HOMEPATH=\Users\Malek</value>
+    <value type="QString" >LOCALAPPDATA=C:\Users\Malek\AppData\Local</value>
+    <value type="QString" >LOGONSERVER=\\HP-WIN7</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=2</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Qt\qt-win-opensource-src-4.4.3\bin;C:\Program Files\Delphi7SE\bin;C:\Program Files\Delphi7SE\Projects\BPL;c:\Program Files\Intel\DMIX;C:\WINDOWS\system32\Wbem;C:\Program Files\MPlayer-p4-svn-27811;C:\Qt\2009.03\qt\bin;C:\Qt\2009.03\mingw\bin;C:\Program Files\Git\cmd</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\qt\bin;C:\Program Files\Common Files\ArcSoft\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\calibre;C:\Program Files\FreeTime\FormatFactory\FFModules;C:\Qt\2009.03\mingw\bin;C:\Qt\2009.03\bin;C:\Qt\2009.03\qt\bin;C:\Python26;C:\Program Files\Common Files\Microsoft Shared\Windows Live</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>
     <value type="QString" >PROCESSOR_REVISION=0f06</value>
+    <value type="QString" >PROGRAMDATA=C:\ProgramData</value>
     <value type="QString" >PROGRAMFILES=C:\Program Files</value>
-    <value type="QString" >QMAKESPEC=win32-g++</value>
+    <value type="QString" >PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</value>
+    <value type="QString" >PUBLIC=C:\Users\Public</value>
     <value type="QString" >QTDIR=C:/Qt/2009.03/qt</value>
     <value type="QString" >SESSIONNAME=Console</value>
     <value type="QString" >SYSTEMDRIVE=C:</value>
-    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
-    <value type="QString" >TEMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >TMP=C:\DOCUME~1\Malek\LOCALS~1\Temp</value>
-    <value type="QString" >USERDOMAIN=HP-XP</value>
+    <value type="QString" >SYSTEMROOT=C:\Windows</value>
+    <value type="QString" >TEMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >TMP=C:\Users\Malek\AppData\Local\Temp</value>
+    <value type="QString" >USERDOMAIN=HP-Win7</value>
     <value type="QString" >USERNAME=Malek</value>
-    <value type="QString" >USERPROFILE=C:\Documents and Settings\Malek</value>
+    <value type="QString" >USERPROFILE=C:\Users\Malek</value>
     <value type="QString" >VBOX_INSTALL_PATH=C:\Program Files\Sun\xVM VirtualBox\</value>
-    <value type="QString" >WINDIR=C:\WINDOWS</value>
+    <value type="QString" >WINDIR=C:\Windows</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >clean</value>
@@ -201,7 +354,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString" >C:/Qt/2009.03/mingw/bin/mingw32-make.exe</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >C:/Documents and Settings/Malek/My Documents/QTCreatorProjects/kchmviewer</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >C:/Users/Malek/kchmviewer-for-Maemo</value>
   </valuemap>
  </data>
  <data>
@@ -350,6 +503,7 @@
   <valuelist type="QVariantList" >
    <value type="QString" >Debug</value>
    <value type="QString" >Release</value>
+   <value type="QString" >Debug-Linux</value>
   </valuelist>
  </data>
  <data>

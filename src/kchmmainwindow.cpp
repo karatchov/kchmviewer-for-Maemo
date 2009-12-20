@@ -28,6 +28,8 @@
 
 #include <QProcess>
 #include <QDesktopServices>
+#include <QWebView>
+#include <QWebFrame>
 
 #include "kde-qt.h"
 
@@ -47,6 +49,7 @@
 #include "kchmkeyeventfilter.h"
 #include "kchmcontentswindow.h"
 #include "kchmsetupdialog.h"
+#include "qcustomtabwidget.h"
 #include "version.h"
 
 
@@ -205,6 +208,8 @@ bool KCHMMainWindow::loadFile ( const QString &loadFileName, bool call_open_page
 		navSetBackEnabled( false );
 		navSetForwardEnabled( false );
 		m_viewWindowMgr->invalidate();
+                if (appConfig.m_advDisableTabs)
+                    m_viewWindowMgr->tabWidget->hideTabBar();
 		refreshCurrentBrowser();
 
 		if ( m_currentSettings->loadSettings (fileName) )
@@ -420,6 +425,7 @@ bool KCHMMainWindow::openPage( const QString & srcurl, unsigned int flags )
 
 void KCHMMainWindow::firstShow()
 {
+
 	if ( !parseCmdLineArgs( ) )
 	{
 		if ( appConfig.m_LoadLatestFileOnStartup && appConfig.m_recentFiles.size() > 0 )
@@ -904,6 +910,9 @@ void KCHMMainWindow::actionChangeSettings()
 	KCHMSetupDialog dlg ( this );
 	
 	dlg.exec();
+
+        QCustomTabWidget * tabWidget = m_viewWindowMgr->tabWidget;
+        appConfig.m_advDisableTabs ? tabWidget->hideTabBar():tabWidget->showTabBar();
 }
 
 
@@ -1103,9 +1112,9 @@ void KCHMMainWindow::actionToggleContentsTab()
 		m_tabWidget->hide();
 }
 
-void KCHMMainWindow::actionHideMenubar()
+void KCHMMainWindow::actionHideToolbar()
 {
-    bool hide = action_Hide_menu_bar->isChecked();
+    bool hide = action_Hide_toolbar->isChecked();
 
     if ( hide )
     {
@@ -1123,17 +1132,35 @@ void KCHMMainWindow::actionHideMenubar()
 
 void KCHMMainWindow::actionEnableKineticScrolling()
 {
-    //this is just a temporary hack
-    //todo: correctly support multiple tabs and saving state
         bool enabled = view_Enable_kinetic_scrolling->isChecked();
+
+        QWidget *widget = this->m_viewWindowMgr->tabWidget->currentWidget();
+
+        if (!widget){
+            view_Enable_kinetic_scrolling->setChecked(false);
+            return;
+        }
+        QWebView *webView = (QWebView*)(widget);
 
         if ( enabled )
         {
-                FlickCharmHandler.activateOn(this->viewWindowMgr()->current()->getQWidget());
+            if (webView){
+                FlickCharmHandler.activateOn(webView);
+                webView->triggerPageAction(QWebPage::Reload);
+            }
+            else
+                if (widget)
+                    FlickCharmHandler.activateOn(widget);
         }
         else
         {
-                FlickCharmHandler.deactivateFrom(this->viewWindowMgr()->current()->getQWidget());
+            if (webView){
+                FlickCharmHandler.deactivateFrom(webView);
+                webView->triggerPageAction(QWebPage::Reload);
+            }
+            else
+                if (widget)
+                    FlickCharmHandler.deactivateFrom(widget);
         }
 
 }
@@ -1311,10 +1338,10 @@ void KCHMMainWindow::setupActions()
 	         this,
 	         SLOT( actionToggleContentsTab() ) );
 	
-        connect( action_Hide_menu_bar,
+        connect( action_Hide_toolbar,
                         SIGNAL( triggered()),
                  this,
-                 SLOT( actionHideMenubar() ) );
+                 SLOT( actionHideToolbar() ) );
 
         connect( view_Enable_kinetic_scrolling,
                         SIGNAL( triggered()),
